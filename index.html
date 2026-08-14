@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MOGAL MOTOR WORKS</title>
+<title>MOGAL MOTOR WORKS | Denting Painting Insurance</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,9 +19,16 @@
     font-family:Arial,sans-serif;
 }
 
-body{
-    background:#000000;
+html{
+    scroll-behavior:smooth;
 }
+
+body{
+    background:#000;
+    color:white;
+}
+
+/* HEADER */
 
 header{
     background:#000;
@@ -30,34 +42,67 @@ header{
     max-width:90%;
 }
 
+header h1{
+    margin-top:10px;
+    font-size:30px;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* HERO */
+
 .hero{
-    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
     url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c');
+
     background-size:cover;
     background-position:center;
+
     color:white;
     text-align:center;
+
     padding:80px 20px;
 }
 
 .hero h1{
     font-size:40px;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .hero p{
     font-size:18px;
+    margin-bottom:20px;
 }
+
+/* BUTTON */
 
 .btn{
     display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    background:red;
+
+    margin:8px;
+    padding:13px 22px;
+
+    background:#e60000;
     color:white;
+
     text-decoration:none;
-    border-radius:5px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:.3s;
 }
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#ff2222;
+}
+
+/* SECTION */
 
 .section{
     padding:50px 20px;
@@ -65,47 +110,12 @@ header{
     color:white;
 }
 
-.services{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:20px;
-}
-
-.card{
-    background:white;
-    color:black;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    width:250px;
-}
-
-.contact{
-    background:#111;
-    color:white;
-    padding:40px 20px;
-    text-align:center;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    z-index:1000;
-}
+/* OWNER */
 
 .owner-container{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:30px;
     flex-wrap:wrap;
 }
 
@@ -116,9 +126,12 @@ header{
 .owner-card img{
     width:150px;
     height:150px;
+
     border-radius:50%;
+
     object-fit:cover;
-    border:3px solid #ddd;
+
+    border:3px solid white;
 }
 
 .owner-card h3{
@@ -129,59 +142,307 @@ header{
     margin-top:5px;
 }
 
+/* GARAGE */
+
 .garage-image{
     width:100%;
     max-width:600px;
+
     border-radius:15px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+
+    box-shadow:0 4px 15px rgba(255,255,255,.2);
 }
 
-.review-button{
-    padding:10px 20px;
-    background:#4285F4;
+/* SERVICES */
+
+.services{
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:25px;
+}
+
+.card{
+    background:white;
+
+    color:black;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    width:250px;
+
+    min-height:130px;
+
+    box-shadow:0 0 12px rgba(255,255,255,.15);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* BOOKING */
+
+.booking-section{
+    background:#111;
+
+    padding:60px 20px;
+
+    text-align:center;
+}
+
+.booking-section h2{
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.booking-section > p{
+    margin-bottom:25px;
+}
+
+.booking-form{
+    max-width:550px;
+
+    margin:auto;
+
+    background:white;
+
+    color:black;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:left;
+
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+
+    font-weight:bold;
+
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border:2px solid #25D366;
+}
+
+.book-button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#25D366;
+
     color:white;
+
     border:none;
-    border-radius:5px;
+
+    border-radius:7px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
     cursor:pointer;
 }
 
-.maps-button{
-    padding:10px 20px;
-    background:#ff6b00;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+.book-button:hover{
+    background:#1ebe5d;
 }
+
+/* CONTACT */
+
+.contact{
+    background:#111;
+
+    color:white;
+
+    padding:45px 20px;
+
+    text-align:center;
+}
+
+.contact p{
+    margin:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    z-index:1000;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.4);
+}
+
+/* LOCATION */
 
 .location-title{
+
     text-align:center;
+
     color:white;
-    margin:30px 0 15px;
+
+    margin:40px 0 15px;
 }
 
 .location-button{
+
     text-align:center;
+
     margin-bottom:20px;
 }
 
+.review-button{
+
+    padding:12px 20px;
+
+    background:#4285F4;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+.maps-button{
+
+    padding:12px 20px;
+
+    background:#ff6b00;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
 .map{
+
     width:100%;
+
     height:350px;
+
     border:0;
 }
-</style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+/* FOOTER */
+
+footer{
+
+    background:#000;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    border-top:1px solid #333;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .btn{
+        width:90%;
+        max-width:320px;
+    }
+
+    .booking-form{
+        padding:20px;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
+
 <header>
 
-    <img src="logo.png" class="logo" alt="Mogal Motor Works Logo">
+    <img src="logo.png"
+         class="logo"
+         alt="Mogal Motor Works Logo">
 
     <h1>MOGAL MOTOR WORKS</h1>
 
@@ -190,94 +451,142 @@ header{
 </header>
 
 
-<!-- HERO SECTION -->
+
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
     <h1>Denting • Painting • Insurance Work</h1>
 
-    <p>Professional Car Repair & Insurance Claim Assistance</p>
+    <p>
+        Professional Car Repair & Insurance Claim Assistance
+    </p>
 
 
-    <!-- CALL NOW -->
+    <!-- CALL -->
+
     <a href="tel:9016942705" class="btn">
 
-        <i class="fas fa-phone"></i> Call Now
+        <i class="fas fa-phone"></i>
+
+        Call Now
 
     </a>
 
 
     <!-- EMAIL -->
-    <a href="mailto:udayrajkhachar125@gmail.com" class="btn">
 
-        <i class="fas fa-envelope"></i> Email Us
+    <a href="mailto:udayrajkhachar125@gmail.com"
+       class="btn">
+
+        <i class="fas fa-envelope"></i>
+
+        Email Us
 
     </a>
 
 
     <!-- WHATSAPP -->
-    <a href="https://wa.me/919016942705" target="_blank" class="btn">
 
-        <i class="fab fa-whatsapp"></i> WhatsApp
+    <a href="https://wa.me/919016942705"
+       target="_blank"
+       class="btn">
+
+        <i class="fab fa-whatsapp"></i>
+
+        WhatsApp
 
     </a>
 
 
     <!-- INSTAGRAM -->
-    <a href="https://www.instagram.com/udayraj_khachar_official" target="_blank" class="btn">
 
-        <i class="fab fa-instagram"></i> Instagram
+    <a href="https://www.instagram.com/udayraj_khachar_official"
+       target="_blank"
+       class="btn">
+
+        <i class="fab fa-instagram"></i>
+
+        Instagram
 
     </a>
 
 
     <!-- BOOK APPOINTMENT -->
-    <a href="https://wa.me/919016942705?text=Hello,%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="btn">
 
-        <i class="fas fa-calendar-check"></i> Book Appointment
+    <a href="#booking"
+       class="btn">
+
+        <i class="fas fa-calendar-check"></i>
+
+        Book Appointment
 
     </a>
 
 
-    <!-- GET FREE ESTIMATE -->
-    <a href="https://wa.me/919016942705?text=મને%20મારી%20કારનો%20Estimate%20જોઈએ%20છે." target="_blank" class="btn">
+    <!-- FREE ESTIMATE -->
 
-        <i class="fas fa-calculator"></i> Get Free Estimate
+    <a href="https://wa.me/919016942705?text=મને%20મારી%20કારનો%20Estimate%20જોઈએ%20છે."
+       target="_blank"
+       class="btn">
+
+        <i class="fas fa-calculator"></i>
+
+        Get Free Estimate
 
     </a>
 
 </section>
 
 
-<!-- OWNERS SECTION -->
+
+<!-- ================= OWNERS ================= -->
+
 <section class="section">
+
+    <h2>Our Owners</h2>
+
+    <br>
 
     <div class="owner-container">
 
 
         <!-- OWNER 1 -->
+
         <div class="owner-card">
 
             <h3>Owner</h3>
 
-            <img src="owner1.png" alt="Udayrajbhai">
+            <img src="owner1.png"
+                 alt="Udayrajbhai">
 
-            <h3>ઉદયરાજભાઈ બી. ખાચર</h3>
+            <h3>
+                ઉદયરાજભાઈ બી. ખાચર
+            </h3>
 
-            <p>Udayrajbhai B. Khachar</p>
+            <p>
+                Udayrajbhai B. Khachar
+            </p>
 
         </div>
 
 
         <!-- OWNER 2 -->
+
         <div class="owner-card">
 
             <h3>Owner</h3>
 
-            <img src="owner2.png" alt="Raghuvirbhai">
+            <img src="owner2.png"
+                 alt="Raghuvirbhai">
 
-            <h3>રઘુવિરભાઈ પી. બોરીચા</h3>
+            <h3>
+                રઘુવિરભાઈ પી. બોરીચા
+            </h3>
 
-            <p>Raghuvirbhai P. Boricha</p>
+            <p>
+                Raghuvirbhai P. Boricha
+            </p>
 
         </div>
 
@@ -287,7 +596,9 @@ header{
 </section>
 
 
-<!-- GARAGE PHOTO SECTION -->
+
+<!-- ================= GARAGE ================= -->
+
 <section class="section">
 
     <h2>Our Garage</h2>
@@ -296,14 +607,16 @@ header{
 
     <img
         src="garriage.jpg"
-        alt="Mogal Motor Works"
+        alt="Mogal Motor Works Garage"
         class="garage-image"
     >
 
 </section>
 
 
-<!-- SERVICES SECTION -->
+
+<!-- ================= SERVICES ================= -->
+
 <section class="section">
 
     <h2>Our Services</h2>
@@ -312,52 +625,72 @@ header{
     <div class="services">
 
 
-        <!-- DENTING -->
         <div class="card">
 
-            <h3>Denting</h3>
+            <h3>
+                <i class="fas fa-car-burst"></i>
+                Denting
+            </h3>
 
-            <p>Professional work.</p>
+            <p>
+                Professional denting work.
+            </p>
 
         </div>
 
 
-        <!-- PAINTING -->
         <div class="card">
 
-            <h3>Painting</h3>
+            <h3>
+                <i class="fas fa-spray-can"></i>
+                Painting
+            </h3>
 
-            <p>Quality finishing.</p>
+            <p>
+                Quality finishing and painting.
+            </p>
 
         </div>
 
 
-        <!-- INSURANCE -->
         <div class="card">
 
-            <h3>Insurance</h3>
+            <h3>
+                <i class="fas fa-file-shield"></i>
+                Insurance
+            </h3>
 
-            <p>Claim support.</p>
+            <p>
+                Insurance claim support.
+            </p>
 
         </div>
 
 
-        <!-- INSURANCE CLAIM -->
         <div class="card">
 
-            <h3>Insurance Claim Work</h3>
+            <h3>
+                <i class="fas fa-file-circle-check"></i>
+                Insurance Claim Work
+            </h3>
 
-            <p>Fast and easy insurance assistance.</p>
+            <p>
+                Fast and easy insurance assistance.
+            </p>
 
         </div>
 
 
-        <!-- ACCIDENT REPAIR -->
         <div class="card">
 
-            <h3>Accident Repair</h3>
+            <h3>
+                <i class="fas fa-car-crash"></i>
+                Accident Repair
+            </h3>
 
-            <p>Complete accident vehicle restoration.</p>
+            <p>
+                Complete accident vehicle restoration.
+            </p>
 
         </div>
 
@@ -367,35 +700,277 @@ header{
 </section>
 
 
-<!-- CONTACT SECTION -->
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking-section"
+         id="booking">
+
+    <h2>
+
+        <i class="fas fa-calendar-check"></i>
+
+        Book Your Appointment
+
+    </h2>
+
+    <p>
+        Fill the details below to request an appointment.
+    </p>
+
+
+    <form class="booking-form"
+          onsubmit="sendBooking(event)">
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+            <label for="customerName">
+
+                Customer Name *
+
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+        </div>
+
+
+        <!-- MOBILE -->
+
+        <div class="form-group">
+
+            <label for="mobile">
+
+                Mobile Number *
+
+            </label>
+
+            <input
+                type="tel"
+                id="mobile"
+                placeholder="Enter mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+        </div>
+
+
+        <!-- CAR -->
+
+        <div class="form-group">
+
+            <label for="carModel">
+
+                Car Model *
+
+            </label>
+
+            <input
+                type="text"
+                id="carModel"
+                placeholder="Example: Swift, Creta, Thar"
+                required
+            >
+
+        </div>
+
+
+        <!-- SERVICE -->
+
+        <div class="form-group">
+
+            <label for="service">
+
+                Service Required *
+
+            </label>
+
+            <select
+                id="service"
+                required
+            >
+
+                <option value="">
+                    Select Service
+                </option>
+
+                <option value="Denting">
+                    Denting
+                </option>
+
+                <option value="Painting">
+                    Painting
+                </option>
+
+                <option value="Insurance Work">
+                    Insurance Work
+                </option>
+
+                <option value="Insurance Claim Work">
+                    Insurance Claim Work
+                </option>
+
+                <option value="Accident Repair">
+                    Accident Repair
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+            <label for="date">
+
+                Preferred Date *
+
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="form-group">
+
+            <label for="time">
+
+                Preferred Time *
+
+            </label>
+
+            <input
+                type="time"
+                id="time"
+                required
+            >
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="form-group">
+
+            <label for="details">
+
+                Additional Details
+
+            </label>
+
+            <textarea
+                id="details"
+                rows="4"
+                placeholder="Tell us about your car problem..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="book-button"
+        >
+
+            <i class="fab fa-whatsapp"></i>
+
+            Send Booking Request
+
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
 <section class="contact">
 
     <h2>Contact Us</h2>
 
     <br>
 
-    <p>📞 9016942705</p>
+    <p>
+        📞
+        <a href="tel:9016942705"
+           style="color:white;">
+            9016942705
+        </a>
+    </p>
 
-    <br>
+    <p>
+        📞
+        <a href="tel:7878260008"
+           style="color:white;">
+            7878260008
+        </a>
+    </p>
 
-    <p>📍 ત્રીકોણી ખોડીયાર, પાળીયાદ રોડ, બોટાદ - 364710</p>
+    <p>
+        📧
+        <a
+            href="mailto:udayrajkhachar125@gmail.com"
+            style="color:white;"
+        >
+            udayrajkhachar125@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📍 ત્રિકોણી ખોડીયારની બાજુમાં,
+        પાળીયાદ રોડ, બોટાદ - 364710
+    </p>
 
 </section>
 
 
-<!-- FLOATING WHATSAPP BUTTON -->
+
+<!-- ================= WHATSAPP FLOATING ================= -->
+
 <a
     class="whatsapp"
     href="https://wa.me/919016942705"
     target="_blank"
 >
 
-    <i class="fab fa-whatsapp"></i> WhatsApp
+    <i class="fab fa-whatsapp"></i>
+
+    WhatsApp
 
 </a>
 
 
-<!-- GOOGLE REVIEW SECTION -->
+
+<!-- ================= LOCATION ================= -->
+
 <h2 class="location-title">
 
     Our Location
@@ -404,7 +979,6 @@ header{
 
 
 <div class="location-button">
-
 
     <a
         href="https://maps.app.goo.gl/FvsZKcsEwYmQnzEY6"
@@ -419,28 +993,33 @@ header{
 
     </a>
 
-
 </div>
 
 
+
 <!-- GOOGLE MAP -->
+
 <iframe
 
     src="https://www.google.com/maps?q=Mogal+Motor+Works&output=embed"
 
     class="map"
 
-    loading="lazy">
+    loading="lazy"
+
+    title="Mogal Motor Works Location">
 
 </iframe>
+
 
 
 <br><br>
 
 
-<!-- VIEW ON GOOGLE MAPS BUTTON -->
-<div class="location-button">
 
+<!-- VIEW MAP -->
+
+<div class="location-button">
 
     <a
         href="https://maps.app.goo.gl/FvsZKcsEwYmQnzEY6"
@@ -449,14 +1028,129 @@ header{
 
         <button class="maps-button">
 
-            View on Google Maps
+            📍 View on Google Maps
 
         </button>
 
     </a>
 
-
 </div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 MOGAL MOTOR WORKS
+    </p>
+
+    <p>
+        Denting • Painting • Insurance • Accident Repair
+    </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function sendBooking(event){
+
+    event.preventDefault();
+
+
+    /* GET FORM VALUES */
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const mobile =
+        document.getElementById("mobile").value.trim();
+
+    const car =
+        document.getElementById("carModel").value.trim();
+
+    const service =
+        document.getElementById("service").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const time =
+        document.getElementById("time").value;
+
+    const details =
+        document.getElementById("details").value.trim();
+
+
+    /* CHECK MOBILE */
+
+    if(!/^[0-9]{10}$/.test(mobile)){
+
+        alert(
+            "Please enter a valid 10 digit mobile number."
+        );
+
+        return;
+
+    }
+
+
+    /* CREATE WHATSAPP MESSAGE */
+
+    const message =
+
+`🚗 MOGAL MOTOR WORKS
+━━━━━━━━━━━━━━━━━━
+
+📅 APPOINTMENT REQUEST
+
+👤 Customer Name:
+${name}
+
+📞 Mobile:
+${mobile}
+
+🚘 Car Model:
+${car}
+
+🔧 Service:
+${service}
+
+📆 Preferred Date:
+${date}
+
+⏰ Preferred Time:
+${time}
+
+📝 Additional Details:
+${details || "No additional details"}
+
+━━━━━━━━━━━━━━━━━━
+Please confirm my appointment.`;
+
+
+    /* WHATSAPP URL */
+
+    const whatsappURL =
+        "https://wa.me/919016942705?text="
+        + encodeURIComponent(message);
+
+
+    /* OPEN WHATSAPP */
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
 
 
 </body>
